@@ -5,6 +5,13 @@ public class CyclicSort {
      int arr[] = {5,4,3,2,1};
      cyclicSort(arr);
         System.out.println(Arrays.toString(arr));
+        int j = arr.length-1;
+        int k = j-1;
+      int sum = (arr[j] -1)*(arr[k] -1);
+        System.out.println(sum);
+        String s = "Om";
+
+       
     }
     static void cyclicSort(int arr[]){
         int i = 0;
@@ -21,6 +28,5 @@ public class CyclicSort {
         int temp = arr[first];
         arr[first] = arr[second];
         arr[second] = temp;
-
     }
 }
