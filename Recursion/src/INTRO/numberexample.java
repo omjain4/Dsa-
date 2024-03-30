@@ -2,13 +2,13 @@ package INTRO;
 
 public class numberexample {
     public static void main(String[] args) {
-        print2(10);
+        print3(10);
     }
 
     static void print(int n) {
         // base condition upto when we want it to print
-        if (n == 5) {
-            System.out.println(5);
+        if (n == 0) {
+            System.out.println(n);
             return;
         }
         System.out.println(n);
