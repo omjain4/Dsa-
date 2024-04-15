@@ -4,47 +4,47 @@ import java.util.Arrays;
 
 public class AllPaths {
     public static void main(String[] args) {
-        boolean[][] board = {
-                {true, true, true},
-                {true, true, true},
-                {true, true, true}
+        int [][] board = {
+                {1,0,0,0},
+                {0,0,0,0},
+                {0,0,0,2}
         };
         int[][] path = new int[board.length][board[0].length];
-        allPathPrint("", board, 0, 0, path, 1);
+        allPath(0, board, 0, 0);
     }
 
-    static void allPath(String p, boolean[][] maze, int r, int c) {
+    static void allPath(int p, int [][] maze, int r, int c) {
         if (r == maze.length - 1 && c == maze[0].length - 1) {
             System.out.println(p);
             return;
         }
 
-        if (!maze[r][c]) {
+        if (maze[r][c] == -1) {
             return;
         }
 
         // i am considering this block in my path
-        maze[r][c] = false;
+        maze[r][c] = -1;
 
         if (r < maze.length - 1) {
-            allPath(p + 'D', maze, r+1, c);
+            allPath(p + 1 , maze, r+1, c);
         }
 
         if (c < maze[0].length - 1) {
-            allPath(p + 'R', maze, r, c+1);
+            allPath(p + 1, maze, r, c+1);
         }
 
         if (r > 0) {
-            allPath(p + 'U', maze, r-1, c);
+            allPath(p + 1 , maze, r-1, c);
         }
 
         if (c > 0) {
-            allPath(p + 'L', maze, r, c-1);
+            allPath(p + 1, maze, r, c-1);
         }
 
         // this line is where the function will be over
         // so before the function gets removed, also remove the changes that were made by that function
-        maze[r][c] = true;
+        maze[r][c] = 0;
     }
 
 

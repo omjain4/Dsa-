@@ -4,8 +4,14 @@ import java.util.ArrayList;
 
 public class PhonePad {
     public static void main(String[] args) {
-        System.out.println(padRet("", "12").size());
-        System.out.println(padCount("", "12"));
+      //  pad("", "12");
+       ArrayList <String> s = new ArrayList<>();
+        for (int i = 0; i < s.size(); i++) {
+
+        }
+
+        System.out.println(padRet("", "2"));
+//        System.out.println(padCount("", "12"));
     }
 
     static void pad(String p, String up) {
@@ -27,9 +33,10 @@ public class PhonePad {
             list.add(p);
             return list;
         }
-        int digit = up.charAt(0) - '0'; // this will convert '2' into 2
+        int digit = up.charAt(0) - '1'; // this will convert '2' into 2
 
         ArrayList<String> list = new ArrayList<>();
+        
 
         for (int i = (digit - 1) * 3; i < digit * 3; i++) {
             char ch = (char) ('a' + i);

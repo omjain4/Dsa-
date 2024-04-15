@@ -9,6 +9,7 @@ public class SubSet {
         int[] arr = {2,3,6,3,3,7};
          int count =0;
         List<List<Integer>> ans = subset(arr);
+        
         for (List<Integer> list : ans) {
             System.out.println(list);
         }

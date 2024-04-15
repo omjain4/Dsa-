@@ -11,9 +11,7 @@ public class Maze {
 //        System.out.println(pathRetDiagonal("", 3, 3));
 
         boolean[][] board = {
-                {true, true, true},
-                {true, false, true},
-                {true, true, true}
+                {true, false}
         };
 
         pathRestrictions("", board, 0, 0);
