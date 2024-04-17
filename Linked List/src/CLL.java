@@ -1,13 +1,17 @@
 public class CLL {
-
     private Node head;
     private Node tail;
-
     public CLL() {
         this.head = null;
         this.tail = null;
     }
-
+    private class Node {
+        int val;
+        Node next;
+        public Node(int val) {
+            this.val = val;
+        }
+    }
     public void insert(int val) {
         Node node = new Node(val);
         if (head == null) {
@@ -15,12 +19,10 @@ public class CLL {
             tail = node;
             return;
         }
-
         tail.next = node;
         node.next = head;
         tail = node;
     }
-
     public void display() {
         Node node = head;
         if (head != null) {
@@ -39,19 +41,16 @@ public class CLL {
         if (node == null) {
             return;
         }
-
         if (head == tail){
             head = null;
             tail = null;
             return;
         }
-
         if (node.val == val) {
             head = head.next;
             tail.next = head;
             return;
         }
-
         do {
             Node n = node.next;
             if (n.val == val) {
@@ -60,15 +59,5 @@ public class CLL {
             }
             node = node.next;
         } while (node != head);
-
-    }
-
-    private class Node {
-        int val;
-        Node next;
-
-        public Node(int val) {
-            this.val = val;
-        }
     }
 }

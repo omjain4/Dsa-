@@ -1,11 +1,20 @@
 public class LL {
-
     private Node head;
     private Node tail;
     private int size;
-
     public LL() {
         this.size = 0;
+    }
+    private class Node {
+        private int value;
+        private Node next;
+        public Node(int value) {
+            this.value = value;
+        }
+        public Node(int value, Node next) {
+            this.value = value;
+            this.next = next;
+        }
     }
 
     public void insertFirst(int val) {
@@ -72,15 +81,15 @@ public class LL {
             return deleteFirst();
         }
 
-        Node secondLast = get(size - 2);
+        Node secondLast = get(size - 2); // getting to the secondlast node of the list.
         int val = tail.value;
         tail = secondLast;
         tail.next = null;
         size--;
-        return val;
+        return val; // returning the value of the deleted node i.e. last element(tail)
     }
 
-    public int delete(int index) {
+    public int delete(int index) { // delete the node at the particular index
         if (index == 0) {
             return deleteFirst();
         }
@@ -88,15 +97,15 @@ public class LL {
             return deleteLast();
         }
 
-        Node prev = get(index - 1);
-        int val = prev.next.value;
+        Node prev = get(index - 1); // getting to the node previous to the node to be deleted.
+        int val = prev.next.value; // getting the value of the node that is at the index
 
-        prev.next = prev.next.next;
+        prev.next = prev.next.next; // returning the value of the deleted node that was at the given index
         size--;
         return val;
     }
 
-    public Node find(int value) {
+    public Node find(int value) { // Find the node given its value;
         Node node = head;
         while (node != null) {
             if (node.value == value) {
@@ -107,7 +116,7 @@ public class LL {
         return null;
     }
 
-    public Node get(int index) {
+    public Node get(int index) { //get the node at the certain index
         Node node = head;
         for (int i = 0; i < index; i++) {
             node = node.next;
@@ -122,7 +131,7 @@ public class LL {
             tail = null;
         }
         size--;
-        return val;
+        return val; //returning thr value of the node that is deleted
     }
 
     public void display() {
@@ -134,19 +143,7 @@ public class LL {
         System.out.println("END");
     }
 
-    private class Node {
-        private int value;
-        private Node next;
 
-        public Node(int value) {
-            this.value = value;
-        }
-
-        public Node(int value, Node next) {
-            this.value = value;
-            this.next = next;
-        }
-    }
 
 
 
@@ -156,7 +153,6 @@ public class LL {
         Node s = second.head;
 
         LL ans = new LL();
-
         while (f != null && s != null) {
             if (f.value < s.value) {
                 ans.insertLast(f.value);
@@ -166,17 +162,14 @@ public class LL {
                 s = s.next;
             }
         }
-
         while (f != null) {
             ans.insertLast(f.value);
             f = f.next;
         }
-
         while (s != null) {
             ans.insertLast(s.value);
             s = s.next;
         }
-
         return ans;
     }
 
@@ -281,7 +274,6 @@ public class LL {
     // https://leetcode.com/problems/remove-duplicates-from-sorted-list
     public void duplicates() {
         Node node = head;
-
         while (node.next != null) {
             if (node.value == node.next.value) {
                 node.next = node.next.next;
@@ -293,6 +285,4 @@ public class LL {
         tail = node;
         tail.next = null;
     }
-
-
 }
