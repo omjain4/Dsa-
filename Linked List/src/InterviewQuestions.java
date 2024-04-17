@@ -1,7 +1,6 @@
 import javax.swing.*;
 
 public class InterviewQuestions {
-
     // https://leetcode.com/problems/linked-list-cycle
     // Amazon and Microsoft
     public boolean hasCycle(ListNode head) {
@@ -17,7 +16,6 @@ public class InterviewQuestions {
         }
         return false;
     }
-
     // find length of the cycle
     public int lengthCycle(ListNode head) {
         ListNode fast = head;
@@ -55,20 +53,16 @@ public class InterviewQuestions {
                 break;
             }
         }
-
         if (length == 0) {
             return null;
         }
-
         // find the start node
         ListNode f = head;
         ListNode s = head;
-
         while (length > 0) {
             s = s.next;
             length--;
         }
-
         // keep moving both forward and they will meet at cycle start
         while (f != s) {
             f = f.next;
@@ -76,7 +70,6 @@ public class InterviewQuestions {
         }
         return s;
     }
-
     // Google: https://leetcode.com/problems/happy-number/
     public boolean isHappy(int n) {
         int slow = n;
