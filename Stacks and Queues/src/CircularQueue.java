@@ -37,7 +37,7 @@ public class CircularQueue {
             throw new Exception("Queue is empty");
         }
 
-        int removed = data[front++];f
+        int removed = data[front++];
         front = front % data.length;
         size--;
         return removed;

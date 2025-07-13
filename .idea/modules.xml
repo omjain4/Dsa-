@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Beginer/Beginer.iml" filepath="$PROJECT_DIR$/Beginer/Beginer.iml" />
       <module fileurl="file://$PROJECT_DIR$/Binary Search/Binary Search.iml" filepath="$PROJECT_DIR$/Binary Search/Binary Search.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DSA.iml" filepath="$PROJECT_DIR$/.idea/DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashMap/HashMap.iml" filepath="$PROJECT_DIR$/HashMap/HashMap.iml" />
       <module fileurl="file://$PROJECT_DIR$/Linear Search/Linear Search.iml" filepath="$PROJECT_DIR$/Linear Search/Linear Search.iml" />
       <module fileurl="file://$PROJECT_DIR$/Linked List/Linked List.iml" filepath="$PROJECT_DIR$/Linked List/Linked List.iml" />
       <module fileurl="file://$PROJECT_DIR$/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Recursion/Recursion.iml" />

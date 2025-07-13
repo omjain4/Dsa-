@@ -1,3 +1,5 @@
+package Binary_Search;
+
 public class BST {
     public class Node {
         private int value;
