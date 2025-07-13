@@ -6,14 +6,31 @@ import java.util.List;
 
 public class SubSet {
     public static void main(String[] args) {
-        int[] arr = {2,3,6,3,3,7};
+        int[] arr = {4,5,0,-2,-3,1};
          int count =0;
-        List<List<Integer>> ans = subset(arr);
-        
-        for (List<Integer> list : ans) {
-            System.out.println(list);
+        List<List<Integer>> total = subset(arr);
+        List<Integer> sum3 = sum(subset(arr));
+        for (Integer n : sum3) {
+
+            if(n % 5 == 0 && n >0){
+              //  System.out.println(n);
+            }
+        }
+       for (List<Integer> t : total){
+           System.out.println(t);
+       }
+    }
+    public static List<Integer> sum(List<List<Integer>> sum){
+        List<Integer> sums = new ArrayList<>();
+        for (List<Integer> list :sum) {
+            int sum2 = 0;
+            for (int num : list) {
+                sum2 += num;
+            }
+            sums.add(sum2);
         }
 
+        return sums;
     }
 
     static List<List<Integer>> subset(int[] arr) {

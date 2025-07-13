@@ -1,3 +1,5 @@
+import java.util.PriorityQueue;
+
 public class QueueMain {
     public static void main(String[] args) throws Exception {
 
@@ -16,6 +18,7 @@ public class QueueMain {
         System.out.println(queue.remove());
         queue.insert(99);
         queue.display();
+
 
 
 //        CustomQueue queue = new CustomQueue(5);

@@ -1,7 +1,11 @@
+package Binary_Search;
+
+import Binary_Search.BST;
+
 public class main {
     public static void main(String[] args) {
         // Scanner scanner = new Scanner(System.in);
-        // BinaryTree tree = new BinaryTree();
+        // Binary_Search.BinaryTree tree = new Binary_Search.BinaryTree();
         // tree.populate(scanner);
         // tree.prettyDisplay();
 

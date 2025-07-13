@@ -1,3 +1,5 @@
+import java.util.PriorityQueue;
+
 public class CustomQueue {
     private int[] data;
     private static final int DEFAULT_SIZE = 10;
@@ -51,5 +53,6 @@ public class CustomQueue {
         }
         System.out.println("END");
     }
+
 
 }
